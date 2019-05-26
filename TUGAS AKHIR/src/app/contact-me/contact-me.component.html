@@ -1,0 +1,36 @@
+<br>
+<div align="center">
+  <h2>Contact Me</h2>
+</div>
+
+<div class="container">
+  <div class="col-md-12">
+    <form [formGroup]="form" (ngSubmit)="onSubmit()">
+      <div class="form-group">
+        <label for="nama"> Nama </label>
+        <input formControlName="nama" type="text" class="form-control" name="nama">
+      </div>
+      <div class="form-group">
+        <label for="email"> Email</label>
+        <input formControlName="email" type="text" class="form-control" name="email">
+            
+      </div>
+      <div class="form-group">
+        <label for="comment"> Comment </label>
+        <input formControlName="comment" type="text" class="form-control" name="comment">
+      </div>
+      <button type="submit" class="btn btn-primary btn-lg btn-block">
+        Submit
+      </button>
+    </form>
+    <br>
+    <!-- looping -->
+    <tr *ngFor="let a of ar_tampil">
+     <h3>DATA</h3>
+     <br>
+     <p>username : {{a.nama}}</p>
+     <p>email : {{a.email}}</p>
+     <p>comment : {{a.comment}}</p>
+  </tr>
+  </div>
+</div>
